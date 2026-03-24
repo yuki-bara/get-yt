@@ -1,0 +1,22 @@
+# SPDX-License-Identifier: 0BSD
+# Author: Makkhawan Sardlah
+
+name: CI
+on:
+    release: 
+        types: [published]
+
+jobs:
+  test:
+    runs-on: 'ubuntu-latest'
+    timeout-minutes: 5
+    steps:
+      - name: Install Make
+        run: sudo apt update && sudo apt install -y make
+      - name: Setup go
+        uses: actions/setup-go@v5
+      - uses: actions/checkout@v4
+      - name: Test compile
+        run: |
+          cd src
+          make
