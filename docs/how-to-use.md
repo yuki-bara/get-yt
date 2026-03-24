@@ -1,6 +1,7 @@
 # how-to-use
 
-[download-video](#download-video)
+- [check version](#check-version)
+- [download video](#download-video)
 
 ## check version
 
