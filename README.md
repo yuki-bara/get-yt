@@ -11,7 +11,7 @@ GET-YT (**GET-Y**ou**T**ube-Video) Is program downloads videos from YouTube (CLI
 
 1. Download in releases
 
-![Releases img](./docs/imgs/Releases.png)
+[![Releases img](./docs/imgs/Releases.png)](https://github.com/yuki-bara/get-yt/releases)
 
 2. Create a binary file (cli)
 ```bash

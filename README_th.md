@@ -11,7 +11,7 @@ GET-YT (**GET-Y**ou**T**ube-Video) มันคือโปรแกรมสำ
 
 1. ดาวน์โหลดใน Releases
 
-![Releases img](./docs/imgs/Releases.png)
+[![Releases img](./docs/imgs/Releases.png)](https://github.com/yuki-bara/get-yt/releases)
 
 2. สร้างไฟล์ไบนารี่สำหรับใช้
 ```bash
