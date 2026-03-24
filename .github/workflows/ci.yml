@@ -17,6 +17,4 @@ jobs:
         uses: actions/setup-go@v5
       - uses: actions/checkout@v4
       - name: Test compile
-        run: |
-          cd src
-          make
+        run: make
