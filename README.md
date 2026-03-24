@@ -9,14 +9,13 @@ GET-YT (**GET-Y**ou**T**ube-Video) Is program downloads videos from YouTube (CLI
 
 ## INSTALL
 
-1. Clone the GET-YT repository
-```bash
-git clone https://github.com/yuki-bara/get-yt.get
-cd get-yt
-```
+1. Download in releases
 
-2. Create a binary file
+![Releases img](./docs/imgs/Releases.png)
+
+2. Create a binary file (cli)
 ```bash
+cd ~/Downloads/get-yt-#(version)
 make build
 ```
 

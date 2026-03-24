@@ -9,14 +9,13 @@ GET-YT (**GET-Y**ou**T**ube-Video) มันคือโปรแกรมสำ
 
 ## วิธีติดตั้ง
 
-1. โคลน GET-YT repo
-```bash
-git clone https://github.com/yuki-bara/get-yt.get
-cd get-yt
-```
+1. ดาวน์โหลดใน Releases
+
+![Releases img](./docs/imgs/Releases.png)
 
 2. สร้างไฟล์ไบนารี่สำหรับใช้
 ```bash
+cd ~/Downloads/get-yt-#(version)
 make build
 ```
 
