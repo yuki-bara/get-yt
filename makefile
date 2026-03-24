@@ -1,10 +1,10 @@
 # SPDX-License-Identifier: 0BSD
 # Author: Makkhawan Sardlah
 
-CMD = "go"
-ACT = "build"
-NAM = "get-yt"
-VERSION=1.0
+CMD = go
+ACT = build
+NAM = get-yt
+VERSION=1.1
 
 build :
 	mkdir -p bin
