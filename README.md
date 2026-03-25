@@ -2,7 +2,7 @@
 
 English | [THAI](./README_th.md)
 
-[![Go](https://img.shields.io/badge/Go-1.26.1%2B-3776AB?logo=Go&logoColor=white)](./src/go.mod)
+[![Go](https://img.shields.io/badge/Go-1.26.1%2B-3776AB?logo=Go&logoColor=white)](https://go.dev/)
 [![License: MIT](https://img.shields.io/badge/License-0BSD-yellow.svg)](./LICENSE)
 
 GET-YT (**GET-Y**ou**T**ube-Video) Is program downloads videos from YouTube (CLI)
