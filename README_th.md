@@ -1,4 +1,4 @@
-# GET-YT-1.0
+# GET-YT-1.1
 
 [English](./README.md) | Thai
 
