@@ -16,7 +16,7 @@ GET-YT (**GET-Y**ou**T**ube-Video) มันคือโปรแกรมสำ
 2. สร้างไฟล์ไบนารี่สำหรับใช้
 ```bash
 cd ~/Downloads/get-yt-#(version)
-make build
+make
 ```
 
 ตอนนี้มีไฟล์ไบนารี่ในโฟลเดอร์binแล้ว

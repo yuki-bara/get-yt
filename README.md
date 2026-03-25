@@ -16,7 +16,7 @@ GET-YT (**GET-Y**ou**T**ube-Video) Is program downloads videos from YouTube (CLI
 2. Create a binary file (cli)
 ```bash
 cd ~/Downloads/get-yt-#(version)
-make build
+make
 ```
 
 Now, have a binary file in bin folder
