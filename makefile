@@ -8,7 +8,7 @@ VERSION=1.1
 
 build :
 	mkdir -p bin
-	$(CMD) $(ACT) -ldflags="-X 'main.version=$(VERSION)'" -o bin/$(NAM) src/$(NAM).go
+	$(CMD) $(ACT) -ldflags="-X 'main.version=$(VERSION)'" -o bin/$(NAM) src/main.go
 
 clean :
 	rm -r bin
