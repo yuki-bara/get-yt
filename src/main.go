@@ -15,7 +15,7 @@ var version = "version"
 
 func main() {
 	if len(os.Args) < 2 {
-		fmt.Println("Args >> error: No URL or No Action")
+		fmt.Println("Args >> error: No [URL/id] or No Action")
 		return
 	}
 
@@ -26,7 +26,7 @@ func main() {
 
 	for i := 1; i < len(os.Args); i++ {
 		if len(os.Args[i]) < 11 {
-			fmt.Println("Id >> error: No id")
+			fmt.Println("Id >> error: No url or id")
 			return
 		}
 		videoID := os.Args[i][len(os.Args[i])-11:]
