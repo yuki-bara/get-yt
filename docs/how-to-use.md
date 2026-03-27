@@ -13,7 +13,7 @@ get-yt -V
 ## download video
 
 ```bash
-get-yt https://www.youtube.com/watch?v=123456789ab
+get-yt -mp4 https://www.youtube.com/watch?v=123456789ab
 #or
-get-yt 123456789ab
+get-yt -mp4 123456789ab
 ```
