@@ -4,11 +4,11 @@
 CMD = go
 ACT = build
 NAM = get-yt
-VERSION=1.3
+VERSION=1.3.1
 
 build :
 	mkdir -p bin
-	$(CMD) $(ACT) -ldflags="-X 'main.version=$(VERSION)'" -o bin/$(NAM) src/main.go
+	$(CMD) $(ACT) -ldflags="-X 'main.version=$(VERSION)'" -o bin/$(NAM) ./src
 
 clean :
 	rm -r bin
