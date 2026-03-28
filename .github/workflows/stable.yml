@@ -2,9 +2,11 @@
 # Author: Makkhawan Sardlah
 
 name: CI
-on:
-    release: 
-        types: [published]
+on: 
+    push:
+        paths: src/**
+        branches: 
+            - stable
 
 permissions:
   contents: read
