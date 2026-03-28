@@ -2,9 +2,7 @@
 # Author: Makkhawan Sardlah
 
 name: CI
-on:
-    release: 
-        types: [published]
+on: [push]
 
 permissions:
   contents: read
