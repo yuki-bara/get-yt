@@ -43,15 +43,13 @@ func Create_file(file_extension string, video *youtube.Video, formats *youtube.F
 	fmt.Println("succeed!")
 }
 
-func Getvideo(id string) (youtube.Client, *youtube.Video, youtube.FormatList, error) {
+func Create_client(id string) (youtube.Client, *youtube.Video, error) {
 	client := youtube.Client{}
 
 	video, err := client.GetVideo(id)
 	if err != nil {
 		fmt.Println("pull >> error: ", err)
-		return client, nil, nil, err
+		return client, nil, err
 	}
-
-	formats := video.Formats.WithAudioChannels()
-	return client, video, formats, nil
+	return client, video, nil
 }
