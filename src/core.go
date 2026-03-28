@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: 0BSD
+// Author: Makkhawan Sardlah
+
 package main
 
 import (
