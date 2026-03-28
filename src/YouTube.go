@@ -33,14 +33,14 @@ func Create_file(file_extension string, video *youtube.Video, formats *youtube.F
 	}
 	defer file.Close()
 
-	fmt.Printf("download: %s...\n", video.Title)
+	fmt.Printf("download: %s...\n", video.Title+file_extension)
 	_, err = io.Copy(file, stream)
 	if err != nil {
 		fmt.Println("download >> error: ", err)
 		return
 	}
 
-	fmt.Println("succeed!")
+	fmt.Println(video.Title + file_extension + " >> download succeed!")
 }
 
 func Create_client(id string) (youtube.Client, *youtube.Video, error) {

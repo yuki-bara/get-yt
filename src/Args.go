@@ -30,8 +30,8 @@ func Step_2(Args []string) {
 			Download_m4a(Args[2:])
 		case "-m4v":
 			Download_m4v(Args[2:])
-		case "-m4va":
-			Download_m4va(Args[2:])
+		case "-mp4u":
+			Download_mp4u(Args[2:])
 		}
 	}
 }

@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+	"os/exec"
 	"sync"
 
 	"github.com/kkdai/youtube/v2"
@@ -101,7 +103,7 @@ func Download_m4v(ID []string) {
 	wg.Wait()
 }
 
-func Download_m4va(ID []string) {
+func Download_mp4u(ID []string) {
 	var wg sync.WaitGroup
 	for i := 0; i < len(ID); i++ {
 		wg.Add(1)
@@ -144,6 +146,14 @@ func Download_m4va(ID []string) {
 			}
 
 			Create_file(".m4a", video, targetFormat, &client)
+
+			cmd := exec.Command("ffmpeg", "-i", video.Title+".m4v", "-i", video.Title+".m4a", "-c", "copy", "-y", video.Title+".mp4")
+			err = cmd.Run()
+			if err != nil {
+				fmt.Println("Error merging:", err)
+				return
+			}
+			fmt.Println("succeed combined to mp4")
 
 		}(ID[i])
 	}
