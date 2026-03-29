@@ -26,4 +26,10 @@ get-yt -m4a https://www.youtube.com/watch?v=123456789ab
 get-yt -m4a 123456789ab
 ```
 
+## download video (upgrade)
 
+```bash
+get-yt -mp4u https://www.youtube.com/watch?v=123456789ab
+#or
+get-yt -mp4u 123456789ab
+```
