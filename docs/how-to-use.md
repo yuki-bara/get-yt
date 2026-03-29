@@ -3,6 +3,7 @@
 - [check version](#check-version)
 - [download video](#download-video)
 - [download sound](#download-sound)
+- [download videod (upgrade)](#download-video-upgrade)
 
 ## check version
 
@@ -18,6 +19,11 @@ get-yt -mp4 https://www.youtube.com/watch?v=123456789ab
 #or
 get-yt -mp4 123456789ab
 ```
+
+But you won't get the best video quality.
+
+[download videod (upgrade)](#download-video-upgrade)
+
 ## download sound
 
 ```bash
@@ -26,4 +32,10 @@ get-yt -m4a https://www.youtube.com/watch?v=123456789ab
 get-yt -m4a 123456789ab
 ```
 
+## download video (upgrade)
 
+```bash
+get-yt -mp4u https://www.youtube.com/watch?v=123456789ab
+#or
+get-yt -mp4u 123456789ab
+```
