@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: 0BSD
 # Author: Makkhawan Sardlah
 
-name: INSTALL
+name: USER
 
 on: 
   push:
