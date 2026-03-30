@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: 0BSD
 # Author: Makkhawan Sardlah
 
-name: CI
+name: CI-MACOS
 
 on: 
   push:
@@ -18,10 +18,7 @@ env:
 
 jobs:
   BUILD:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest]
-    runs-on: ${{ matrix.os }}
+    runs-on: macos-latest
     steps:
       - name: Setup go
         uses: actions/setup-go@v5

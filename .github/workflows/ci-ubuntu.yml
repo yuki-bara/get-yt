@@ -1,0 +1,30 @@
+# SPDX-License-Identifier: 0BSD
+# Author: Makkhawan Sardlah
+
+name: CI-UBUNTU
+
+on: 
+  push:
+    paths:
+      - src/**
+      - .github/workflows/**
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  BUILD:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.26.1'
+          cache-dependency-path: go.work
+      - uses: actions/checkout@v4
+      - name: Test compile
+        run: make

@@ -1,7 +1,5 @@
 # GET-YT
 
-English | [THAI](./README_th.md)
-
 [![Go](https://img.shields.io/badge/Go-1.26.1%2B-3776AB?logo=Go&logoColor=white)](https://go.dev/)
 [![License: 0BSD](https://img.shields.io/badge/License-0BSD-yellow.svg)](./LICENSE)
 [![CI](https://github.com/yuki-bara/get-yt/actions/workflows/ci.yml/badge.svg)](https://github.com/yuki-bara/get-yt/actions/workflows/ci.yml)
@@ -31,5 +29,5 @@ get-yt -V
 
 |NAME|STATUS|
 |-|-|
-|Test compie|[![CI](https://github.com/yuki-bara/get-yt/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/yuki-bara/get-yt/actions/workflows/ci.yml)|
-|Test user|[![CI](https://github.com/yuki-bara/get-yt/actions/workflows/user.yml/badge.svg?branch=main)](https://github.com/yuki-bara/get-yt/actions/workflows/user.yml)|
+|Test compie|[![ci-ubuntu](https://github.com/yuki-bara/get-yt/actions/workflows/ci-ubuntu.yml/badge.svg?branch=main)](https://github.com/yuki-bara/get-yt/actions/workflows/ci-ubuntu.yml)[![ci-macos](https://github.com/yuki-bara/get-yt/actions/workflows/ci-macos.yml/badge.svg?branch=main)](https://github.com/yuki-bara/get-yt/actions/workflows/ci-macos.yml)|
+|Test user|[![user-ubuntu](https://github.com/yuki-bara/get-yt/actions/workflows/ci-ubuntu.yml/badge.svg?branch=main)](https://github.com/yuki-bara/get-yt/actions/workflows/ci-ubuntu.yml)[![user-macos](https://github.com/yuki-bara/get-yt/actions/workflows/user-macos.yml/badge.svg?branch=main)](https://github.com/yuki-bara/get-yt/actions/workflows/user-macos.yml)|

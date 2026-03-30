@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: 0BSD
 # Author: Makkhawan Sardlah
 
-name: USER
+name: USER-UBUNTU
 
 on: 
   push:
@@ -18,10 +18,7 @@ env:
 
 jobs:
   USER:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest]
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
       - name: Setup go
         uses: actions/setup-go@v5
