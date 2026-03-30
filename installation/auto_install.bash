@@ -2,16 +2,16 @@
 
 version="1.5-lab"
 
-mkdir -p ~/get-yt-install/dev || exit 1
+mkdir -p ~/.cache/get-yt-install/dev || exit 1
 
 cleanup() {
     trap '' SIGINT SIGHUP SIGTERM EXIT
-    rm -r ~/get-yt-install
+    rm -r ~/.cache/get-yt-install/dev
 }
 
 trap "cleanup > /dev/null 2>&1" SIGINT SIGHUP SIGTERM EXIT
 
-cd ~/get-yt-install || exit 1
+cd ~/.cache/get-yt-install/dev || exit 1
 
 if ! wget "https://github.com/yuki-bara/get-yt/archive/refs/tags/v$version.tar.gz" -P dev; then
     exit 1
