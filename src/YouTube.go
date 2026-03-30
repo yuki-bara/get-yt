@@ -7,8 +7,10 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"path/filepath"
 
 	"github.com/kkdai/youtube/v2"
+	"github.com/klauspost/compress/zstd"
 )
 
 func Check_id(id string) string {
@@ -19,28 +21,64 @@ func Check_id(id string) string {
 	return id[len(id)-11:]
 }
 
-func Create_file(file_extension string, video *youtube.Video, formats *youtube.Format, client *youtube.Client) {
-	stream, _, err := client.GetStream(video, formats)
+func Create_file(file_extension string, video *youtube.Video, format *youtube.Format, client *youtube.Client) {
+	cacheDir, err := os.UserCacheDir()
 	if err != nil {
-		fmt.Println("Stream >> error: ", err)
+		fmt.Println("cache >> error: ", err)
 		return
 	}
-	defer stream.Close()
-	file, err := os.Create(video.Title + file_extension)
-	if err != nil {
-		fmt.Println("file >> error:", err)
-		return
-	}
-	defer file.Close()
+	dircache := filepath.Join(cacheDir, "get-yt")
+	cachefile := filepath.Join(dircache, video.ID+file_extension+".zst")
+	_, err = os.Stat(cachefile)
+	filename := video.Title + file_extension
+	if err == nil {
+		fmt.Printf("cache >> copyfile: cache/%s >> %s", cachefile, filename)
+		cache, _ := os.Open(cachefile)
+		defer cache.Close()
+		decoder, _ := zstd.NewReader(cache)
+		defer decoder.Close()
+		file, _ := os.Create(filename)
+		defer file.Close()
+		_, _ = io.Copy(file, decoder)
+		fmt.Println(filename + " >> copy succeed!")
+	} else if os.IsNotExist(err) {
+		stream, _, err := client.GetStream(video, format)
+		if err != nil {
+			fmt.Println("Stream >> error: ", err)
+			return
+		}
+		defer stream.Close()
+		file, err := os.Create(filename)
+		if err != nil {
+			fmt.Println("file >> error:", err)
+			return
+		}
+		defer file.Close()
 
-	fmt.Printf("download: %s...\n", video.Title+file_extension)
-	_, err = io.Copy(file, stream)
-	if err != nil {
-		fmt.Println("download >> error: ", err)
-		return
+		fmt.Printf("download: %s...\n", video.Title+file_extension)
+		_, err = io.Copy(file, stream)
+		if err != nil {
+			fmt.Println("download >> error: ", err)
+			return
+		}
+		err = os.MkdirAll(dircache, 0755)
+		if err != nil {
+			fmt.Println("dir >> error: ", err)
+		}
+		cache, err := os.Create(cachefile)
+		if err != nil {
+			fmt.Println("file >> error: ", err)
+			return
+		}
+		defer cache.Close()
+		file.Seek(0, 0)
+		encoder, _ := zstd.NewWriter(cache)
+		defer encoder.Close()
+		io.Copy(encoder, file)
+		fmt.Println(filename + " >> download succeed!")
+	} else {
+		fmt.Print("cache >> error: ", err)
 	}
-
-	fmt.Println(video.Title + file_extension + " >> download succeed!")
 }
 
 func Create_client(id string) (youtube.Client, *youtube.Video, error) {

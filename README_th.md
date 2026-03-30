@@ -10,14 +10,16 @@ GET-YT (**GET-Y**ou**T**ube-Video) มันคือโปรแกรมสำ
 
 ## วิธีติดตั้ง
 
-1. ดาวน์โหลดใน Releases
+ดาวน์โหลด
 
-[![Releases img](./docs/imgs/Releases.png)](https://github.com/yuki-bara/get-yt/releases)
-
-2. สร้างไฟล์ไบนารี่สำหรับใช้
 ```bash
-cd ~/Downloads/get-yt-#(version)
-make
+curl -fsSL https://github.com/yuki-bara/get-yt/raw/refs/heads/main/installation/auto_install.bash | bash
+```
+
+ตรวจสอบ
+
+```bash
+get-yt -V
 ```
 
 ตอนนี้มีไฟล์ไบนารี่ในโฟลเดอร์binแล้ว

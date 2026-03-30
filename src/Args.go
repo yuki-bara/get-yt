@@ -6,6 +6,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 )
 
 func Step_1(Args []string) int {
@@ -16,6 +17,12 @@ func Step_1(Args []string) int {
 	if os.Args[1] == "-V" {
 		fmt.Printf("\033[33m Version:\033[36m %s \033[0m\n", version)
 		return -1
+	}
+	if os.Args[1] == "-C" {
+		cacheDir, err := os.UserCacheDir()
+		if err == nil {
+			os.RemoveAll(filepath.Join(cacheDir, "get-yt"))
+		}
 	}
 	return 0
 }
