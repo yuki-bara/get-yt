@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+version="1.5-lab"
+
 mkdir -p ~/get-yt-install/dev || exit 1
 
 cleanup() {
@@ -10,8 +12,6 @@ cleanup() {
 trap "cleanup > /dev/null 2>&1" SIGINT SIGHUP SIGTERM EXIT
 
 cd ~/get-yt-install || exit 1
-
-read -p "version: " -r version
 
 if ! wget "https://github.com/yuki-bara/get-yt/archive/refs/tags/v$version.tar.gz" -P dev; then
     exit 1
