@@ -26,3 +26,10 @@ get-yt -V
 ## MANUAL
 
 - [HOW TO USE](./docs/how-to-use.md)
+
+## WORKFLOWS
+
+|NAME|STATUS|
+|-|-|
+|Test compie|[![CI](https://github.com/yuki-bara/get-yt/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/yuki-bara/get-yt/actions/workflows/ci.yml)|
+|Test install|[![CI](https://github.com/yuki-bara/get-yt/actions/workflows/user.yml/badge.svg?branch=main)](https://github.com/yuki-bara/get-yt/actions/workflows/user.yml)|
