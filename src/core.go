@@ -5,6 +5,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"os/exec"
 	"sync"
 
@@ -156,6 +157,8 @@ func Download_mp4u(ID []string) {
 				fmt.Println("Error merging:", err)
 				return
 			}
+			os.Remove(video.Title + ".m4a")
+			os.Remove(video.Title + ".m4v")
 			fmt.Println("succeed combined to mp4")
 
 		}(ID[i])
