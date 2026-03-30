@@ -39,3 +39,9 @@ get-yt -mp4u https://www.youtube.com/watch?v=123456789ab
 #or
 get-yt -mp4u 123456789ab
 ```
+
+## clean cache
+
+```bash
+get-yt -C
+```
