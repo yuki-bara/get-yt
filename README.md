@@ -10,17 +10,18 @@ GET-YT (**GET-Y**ou**T**ube-Video) Is program downloads videos from YouTube (CLI
 
 ## INSTALL
 
-1. Download in releases
+install
 
-[![Releases img](./docs/imgs/Releases.png)](https://github.com/yuki-bara/get-yt/releases)
-
-2. Create a binary file (cli)
 ```bash
-cd ~/Downloads/get-yt-#(version)
-make
+curl -fsSL https://github.com/yuki-bara/get-yt/raw/refs/heads/main/installation/auto_install.bash | bash
 ```
 
-Now, have a binary file in bin folder
+check
+
+```bash
+get-yt -V
+```
+
 
 ## MANUAL
 
