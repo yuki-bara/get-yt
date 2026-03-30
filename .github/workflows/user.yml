@@ -32,6 +32,6 @@ jobs:
           cache-dependency-path: go.work
       - uses: actions/checkout@v4
       - name: Test install
-        run: sudo curl -fsSL https://github.com/yuki-bara/get-yt/raw/refs/heads/main/installation/auto_install.bash
+        run: sudo curl -fsSL https://github.com/yuki-bara/get-yt/raw/refs/heads/main/installation/auto_install.bash | bash
       - name: Test download
         run: get-yt -mp4 https://www.youtube.com/watch?v=dQw4w9WgXcQ
