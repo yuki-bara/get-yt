@@ -2,9 +2,13 @@
 # Author: Makkhawan Sardlah
 
 name: CI
+
 on: 
-    push:
-        paths: src/**
+  push:
+    paths:
+      - src/**
+      - .github/workflows
+  workflow_dispatch:
 
 permissions:
   contents: read
