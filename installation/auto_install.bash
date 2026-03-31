@@ -23,10 +23,11 @@ cd "get-yt-$version" || exit 1
 
 make
 
-echo "move file to /usr/bin"
+echo "Moving to /usr/bin..."
 
-if ! sudo mv bin/get-yt /usr/bin; then
-    echo "error"
-    echo "move file to /usr/local/bin"
-    sudo mv bin/get-yt /usr/local/bin
+if ! sudo mv bin/get-yt /usr/bin/ 2>/dev/null; then
+    echo "Error: /usr/bin is read-only. Moving to /usr/local/bin instead..."
+    sudo mkdir -p /usr/local/bin
+    sudo mv bin/get-yt /usr/local/bin/
+    sudo chmod +x /usr/local/bin/get-yt
 fi
