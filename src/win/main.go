@@ -4,7 +4,9 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
 )
 
 func examine(mode string, url string) {
@@ -22,8 +24,12 @@ func main() {
 	var url string
 	var mode string
 	fmt.Print("url / id: ")
-	fmt.Scanln(url)
+	fmt.Scanln(&url)
 	fmt.Print("file (mp4 m4a): ")
-	fmt.Scanln(mode)
+	fmt.Scanln(&mode)
 	examine(mode, url)
+	fmt.Println("\n------------------------------")
+	fmt.Println("Done! Press Enter to exit...")
+	scanner := bufio.NewScanner(os.Stdin)
+	scanner.Scan()
 }

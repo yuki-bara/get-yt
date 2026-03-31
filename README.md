@@ -10,18 +10,23 @@ GET-YT (**GET-Y**ou**T**ube-Video) Is program downloads videos from YouTube (CLI
 
 ## INSTALL
 
-install
+### UNIX
+
+Install
 
 ```bash
 curl -fsSL https://github.com/yuki-bara/get-yt/raw/refs/heads/main/installation/auto_install.bash | bash
 ```
 
-check
+Check
 
 ```bash
 get-yt -V
 ```
 
+### WINDOWS (Lab/Test)
+
+Download the exe file from [Releases](https://github.com/yuki-bara/get-yt/releases).
 
 ## MANUAL
 
@@ -34,3 +39,4 @@ get-yt -V
 |Test compie|[![ci-ubuntu](https://github.com/yuki-bara/get-yt/actions/workflows/ci-ubuntu.yml/badge.svg?branch=main)](https://github.com/yuki-bara/get-yt/actions/workflows/ci-ubuntu.yml)[![ci-macos](https://github.com/yuki-bara/get-yt/actions/workflows/ci-macos.yml/badge.svg?branch=main)](https://github.com/yuki-bara/get-yt/actions/workflows/ci-macos.yml)|
 |Test install and use|[![user-ubuntu](https://github.com/yuki-bara/get-yt/actions/workflows/user-ubuntu.yml/badge.svg?branch=main)](https://github.com/yuki-bara/get-yt/actions/workflows/user-ubuntu.yml)[![user-macos](https://github.com/yuki-bara/get-yt/actions/workflows/user-macos.yml/badge.svg?branch=main)](https://github.com/yuki-bara/get-yt/actions/workflows/user-macos.yml)|
 |Build in releases|[![build-win](https://github.com/yuki-bara/get-yt/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/yuki-bara/get-yt/actions/workflows/release.yml)|
+|CodeQL|[![CodeQL](https://github.com/yuki-bara/get-yt/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/yuki-bara/get-yt/actions/workflows/github-code-scanning/codeql)|

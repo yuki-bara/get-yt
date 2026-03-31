@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"path/filepath"
 
 	"github.com/kkdai/youtube/v2"
 )
@@ -20,13 +21,15 @@ func Check_id(id string) string {
 }
 
 func Create_file(file_extension string, video *youtube.Video, formats *youtube.Format, client *youtube.Client) {
+	home, _ := os.UserHomeDir()
+	downloadDir := filepath.Join(home, "Downloads")
 	stream, _, err := client.GetStream(video, formats)
 	if err != nil {
 		fmt.Println("Stream >> error: ", err)
 		return
 	}
 	defer stream.Close()
-	file, err := os.Create(video.Title + file_extension)
+	file, err := os.Create(filepath.Join(downloadDir, video.Title+file_extension))
 	if err != nil {
 		fmt.Println("file >> error:", err)
 		return
