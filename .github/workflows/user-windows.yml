@@ -26,7 +26,7 @@ jobs:
           go-version: '1.26.1'
       - uses: actions/checkout@v6
       - name: Test install
-        run: make
+        run: make build-root-win
       - name: Test download
         run: |
             "https://www.youtube.com/watch?v=dQw4w9WgXcQ", "mp4" | bin/get-yt.exe

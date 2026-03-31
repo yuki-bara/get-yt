@@ -16,7 +16,7 @@ build-win :
 	GOOS=windows GOARCH=arm64 go build -o bin/win/$(NAM)-arm.exe ./src/win
 	GOOS=windows GOARCH=386 go build -o bin/win/$(NAM).exe ./src/win
 
-build-root :
+build-root-win :
 	mkdir bin
 	$(CMD) $(ACT) -ldflags="-X 'main.version=$(VERSION)'" -o bin\$(NAM).exe .\src\win
 
