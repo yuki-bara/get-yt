@@ -13,5 +13,4 @@ up to you
 |feature|release|pre-release|
 |-|-|-|
 |Future|Safe, but not new.|New!!!|
-|Install|make|autofile in github|
 |Language version|I only change it sometimes.|New|

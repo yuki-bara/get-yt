@@ -32,5 +32,5 @@ get-yt -V
 |NAME|STATUS|
 |-|-|
 |Test compie|[![ci-ubuntu](https://github.com/yuki-bara/get-yt/actions/workflows/ci-ubuntu.yml/badge.svg?branch=main)](https://github.com/yuki-bara/get-yt/actions/workflows/ci-ubuntu.yml)[![ci-macos](https://github.com/yuki-bara/get-yt/actions/workflows/ci-macos.yml/badge.svg?branch=main)](https://github.com/yuki-bara/get-yt/actions/workflows/ci-macos.yml)|
-|Test user|[![user-ubuntu](https://github.com/yuki-bara/get-yt/actions/workflows/user-ubuntu.yml/badge.svg?branch=main)](https://github.com/yuki-bara/get-yt/actions/workflows/user-ubuntu.yml)[![user-macos](https://github.com/yuki-bara/get-yt/actions/workflows/user-macos.yml/badge.svg?branch=main)](https://github.com/yuki-bara/get-yt/actions/workflows/user-macos.yml)|
-|BUILD|[![build-win](https://github.com/yuki-bara/get-yt/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/yuki-bara/get-yt/actions/workflows/release.yml)|
+|Test install and use|[![user-ubuntu](https://github.com/yuki-bara/get-yt/actions/workflows/user-ubuntu.yml/badge.svg?branch=main)](https://github.com/yuki-bara/get-yt/actions/workflows/user-ubuntu.yml)[![user-macos](https://github.com/yuki-bara/get-yt/actions/workflows/user-macos.yml/badge.svg?branch=main)](https://github.com/yuki-bara/get-yt/actions/workflows/user-macos.yml)|
+|Build in releases|[![build-win](https://github.com/yuki-bara/get-yt/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/yuki-bara/get-yt/actions/workflows/release.yml)|
