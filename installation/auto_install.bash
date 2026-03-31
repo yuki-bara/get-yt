@@ -25,4 +25,8 @@ make
 
 echo "move file to /usr/bin"
 
-sudo mv bin/get-yt /usr/bin
+if ! sudo mv bin/get-yt /usr/bin; then
+    echo "error"
+    echo "move file to /usr/local/bin"
+    sudo mv bin/get-yt /usr/local/bin
+fi

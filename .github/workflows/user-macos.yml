@@ -8,6 +8,7 @@ on:
     paths:
       - src/**
       - .github/workflows/**
+      - installation/**
   workflow_dispatch:
 
 permissions:
