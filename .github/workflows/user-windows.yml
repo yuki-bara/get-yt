@@ -1,14 +1,13 @@
 # SPDX-License-Identifier: 0BSD
 # Author: Makkhawan Sardlah
 
-name: USER-MACOS
+name: USER-WINDOWS
 
 on: 
   push:
     paths:
       - src/**
       - .github/workflows/**
-      - installation/**
   workflow_dispatch:
 
 permissions:
@@ -19,7 +18,7 @@ env:
 
 jobs:
   USER:
-    runs-on: macos-latest
+    runs-on: windows-latest
     steps:
       - name: Setup go
         uses: actions/setup-go@v5
@@ -27,6 +26,8 @@ jobs:
           go-version: '1.26.1'
       - uses: actions/checkout@v6
       - name: Test install
-        run: sudo curl -fsSL https://github.com/yuki-bara/get-yt/raw/refs/heads/main/installation/auto_install.bash | bash
+        run: make
       - name: Test download
-        run: get-yt -mp4 https://www.youtube.com/watch?v=dQw4w9WgXcQ
+        run: |
+            "https://www.youtube.com/watch?v=dQw4w9WgXcQ", "mp4" | bin/get-yt.exe
+            "https://www.youtube.com/watch?v=dQw4w9WgXcQ", "m4a" | bin/get-yt.exe

@@ -24,7 +24,6 @@ jobs:
         uses: actions/setup-go@v5
         with:
           go-version: '1.26.1'
-          cache-dependency-path: go.work
       - uses: actions/checkout@v6
       - name: Test compile
         run: make
