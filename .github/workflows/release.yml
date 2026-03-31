@@ -1,0 +1,28 @@
+name: Edit Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build win
+        run: |
+          make build-win
+
+      - name: Upload Compile Windows
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            bin/win/*
+          name: Release ${{ github.ref_name }}
+          draft: false
+          prerelease: ${{ contains(github.ref_name, 'lab') }}
