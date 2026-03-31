@@ -25,4 +25,4 @@ jobs:
             bin/win/*
           name: Release ${{ github.ref_name }}
           draft: false
-          prerelease: ${{ contains(github.ref_name, 'lab') }}
+          prerelease: ${{ contains(github.ref_name, '(unstable)') }}
