@@ -18,7 +18,7 @@ build-win :
 
 build-root-win :
 	mkdir bin
-	$(CMD) $(ACT) -ldflags="-X 'main.version=$(VERSION)'" -o bin\$(NAM).exe .\src\win
+	$(CMD) $(ACT) -ldflags="-X 'main.version=$(VERSION)'" -o bin/$(NAM).exe ./src/win
 
 clean :
 	rm -r bin
