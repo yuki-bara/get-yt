@@ -34,6 +34,10 @@ get-yt -m4a 123456789ab
 
 ## download video (upgrade)
 
+What is mp4u?
+
+This process combines m4a and m4v files to achieve the highest video quality.
+
 ```bash
 get-yt -mp4u https://www.youtube.com/watch?v=123456789ab
 #or
