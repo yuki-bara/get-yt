@@ -17,7 +17,7 @@ The difference lies in the method of use.
 ### unix
 
 ```bash
-get -mp4 dQw4w9WgXcQ
+get-yt -mp4 dQw4w9WgXcQ
 ```
 
 ### windows
